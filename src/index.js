@@ -43,9 +43,19 @@ var app5 = new Vue({
     data: {
         message: 'Hello Vue!'
     },
+    // In this method we update the state of our app without touching the DOM
     methods: {
         reverseMessage: function () {
             this.message = this.message.split('').reverse().join('')
         }
+    }
+})
+
+// Vue also provides the v-model directive that makes two way binding between
+// form input and app state a breeze.
+var app6 = new Vue({
+    el: '#app6',
+    data: {
+        message: 'Hello you meme loving fuck.'
     }
 })
