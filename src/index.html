@@ -37,6 +37,17 @@
             <p>{{ message }}</p>
             <input v-model="message">
         </div>
+
+        <div id="todo">
+            <ol>
+                <!-- Create an instance of the todo component -->
+                <todo-item
+                    v-for="item in storeList"
+                    v-bind:todo="item"
+                    v-bind:key="item.id">
+                </todo-item>
+            </ol>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </body>
 </html>

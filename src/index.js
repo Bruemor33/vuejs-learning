@@ -59,3 +59,22 @@ var app6 = new Vue({
         message: 'Hello you meme loving fuck.'
     }
 })
+
+// Vue Components
+Vue.component('todo-item', {
+    // The todo item now accepts 'props', like a custom attribute
+    // This prop is called todo
+    props: ['todo'],
+    template: '<li>{{ todo.text }}</li>'
+})
+
+var app7 = new Vue({
+    el: '#todo',
+    data: {
+        storeList: [
+            { id: 0, text: 'Veggies' },
+            { id: 1, text: 'Cheese' },
+            { id: 2, text: 'Whatever you want' }
+        ]
+    }
+})
